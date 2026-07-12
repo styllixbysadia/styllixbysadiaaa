@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details - Styllix by Sadia</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logo.png" class="logo" alt="Logo">
+
+<h1>STYLLIX BY SADIA</h1>
+
+<p>Luxury Fashion Store</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="index.html#products">Products</a>
+<a href="index.html#about">About</a>
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+<section class="product-detail">
+
+<div class="product-image">
+
+<img id="mainImage" src="images/bag1.jpg" alt="Luxury Handbag">
+
+<div class="small-images">
+
+<img src="images/bag1.jpg" onclick="changeImage('images/bag1.jpg')">
+
+<img src="images/bag2.jpg" onclick="changeImage('images/bag2.jpg')">
+
+<img src="images/bag3.png" onclick="changeImage('images/bag3.png')">
+
+<img src="images/bag4.jpg" onclick="changeImage('images/bag4.jpg')">
+
+</div>
+
+</div>
+
+<div class="detail-info">
+
+<h2>Luxury Handbag</h2>
+
+<h3>Rs. 4,999</h3>
+
+<p>
+
+Premium quality luxury handbag made with elegant design and excellent finishing.
+Perfect for everyday use, parties and special occasions.
+
+</p>
+
+<div class="quantity">
+
+<button id="minus">-</button>
+
+<span id="qty">1</span>
+
+<button id="plus">+</button>
+
+</div>
+
+<button
+class="add-cart"
+data-name="Luxury Handbag"
+data-price="4999">
+
+Add To Cart
+
+</button>
+
+<br><br>
+
+<a href="https://wa.me/923281820980" target="_blank">
+
+<button class="buy-btn">
+
+Order on WhatsApp
+
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
