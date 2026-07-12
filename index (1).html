@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Styllix by Sadia</title>
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<img src="images/logo.png" class="logo" alt="Logo">
+
+<h1>STYLLIX BY SADIA</h1>
+
+<p>Luxury Fashion Store</p>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#products">Products</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+<div class="cart-icon" id="cartIcon">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cart-count">0</span>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="slider">
+
+<img src="images/hero1.jpg" class="slide active" alt="Hero 1">
+
+<img src="images/hero2.jpg" class="slide" alt="Hero 2">
+
+<img src="images/hero3.jpg" class="slide" alt="Hero 3">
+
+<img src="images/hero4.jpg" class="slide" alt="Hero 4">
+
+</div>
+
+<div class="hero-text">
+
+<h2>Luxury Fashion Collection</h2>
+
+<p>Premium Bags • Watches • Jewelry</p>
+
+<a href="#products">
+
+<button class="buy-btn">Shop Now</button>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-box">
+
+<input type="text" id="searchInput" placeholder="Search Products...">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<h2>Shop By Category</h2>
+
+<div class="category-box">
+
+<div class="category">👜 Handbags</div>
+
+<div class="category">⌚ Watches</div>
+
+<div class="category">💍 Jewelry</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<h2>Our Products</h2>
+
+<div class="product-grid"><!-- PRODUCT 1 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/bag1.jpg" alt="Luxury Handbag">
+        <h3>Luxury Handbag</h3>
+    </a>
+    <p>Premium leather handbag.</p>
+    <h4>Rs. 4,999</h4>
+    <button class="add-cart"
+        data-name="Luxury Handbag"
+        data-price="4999">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 2 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/bag2.jpg" alt="Classic Handbag">
+        <h3>Classic Handbag</h3>
+    </a>
+    <p>Elegant everyday bag.</p>
+    <h4>Rs. 5,299</h4>
+    <button class="add-cart"
+        data-name="Classic Handbag"
+        data-price="5299">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 3 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/bag3.png" alt="Designer Handbag">
+        <h3>Designer Handbag</h3>
+    </a>
+    <p>Luxury fashion bag.</p>
+    <h4>Rs. 5,999</h4>
+    <button class="add-cart"
+        data-name="Designer Handbag"
+        data-price="5999">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 4 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/bag4.jpg" alt="Fashion Handbag">
+        <h3>Fashion Handbag</h3>
+    </a>
+    <p>Premium quality handbag.</p>
+    <h4>Rs. 6,499</h4>
+    <button class="add-cart"
+        data-name="Fashion Handbag"
+        data-price="6499">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 5 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/watch1.jpg" alt="Classic Watch">
+        <h3>Classic Watch</h3>
+    </a>
+    <p>Elegant wrist watch.</p>
+    <h4>Rs. 3,499</h4>
+    <button class="add-cart"
+        data-name="Classic Watch"
+        data-price="3499">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 6 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/watch2.jpg" alt="Luxury Watch">
+        <h3>Luxury Watch</h3>
+    </a>
+    <p>Premium quality watch.</p>
+    <h4>Rs. 4,299</h4>
+    <button class="add-cart"
+        data-name="Luxury Watch"
+        data-price="4299">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 7 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/watch3.jpg" alt="Gold Watch">
+        <h3>Gold Watch</h3>
+    </a>
+    <p>Stylish gold watch.</p>
+    <h4>Rs. 4,999</h4>
+    <button class="add-cart"
+        data-name="Gold Watch"
+        data-price="4999">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 8 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/watch4.jpg" alt="Silver Watch">
+        <h3>Silver Watch</h3>
+    </a>
+    <p>Modern silver watch.</p>
+    <h4>Rs. 5,499</h4>
+    <button class="add-cart"
+        data-name="Silver Watch"
+        data-price="5499">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 9 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/jewelry1.jpg" alt="Silver Jewelry Set">
+        <h3>Silver Jewelry Set</h3>
+    </a>
+    <p>Beautiful jewelry collection.</p>
+    <h4>Rs. 3,799</h4>
+    <button class="add-cart"
+        data-name="Silver Jewelry Set"
+        data-price="3799">
+        Add to Cart
+    </button>
+</div>
+
+<!-- PRODUCT 10 -->
+
+<div class="card">
+    <span class="badge">NEW</span>
+    <a href="product.html">
+        <img src="images/jewelry2.jpg" alt="Gold Jewelry Set">
+        <h3>Gold Jewelry Set</h3>
+    </a>
+    <p>Elegant jewelry collection.</p>
+    <h4>Rs. 3,999</h4>
+    <button class="add-cart"
+        data-name="Gold Jewelry Set"
+        data-price="3999">
+        Add to Cart
+    </button>
+</div></div>
+
+</section>
+
+<!-- CART SIDEBAR -->
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+        <h2>🛒 Shopping Cart</h2>
+        <span id="closeCart">&times;</span>
+    </div>
+
+    <div id="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <h3>Total: Rs. <span id="cart-total">0</span></h3>
+
+        <button id="checkoutBtn" class="buy-btn">
+            Checkout
+        </button>
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <h2>About Styllix by Sadia</h2>
+
+    <p>
+        Welcome to <strong>Styllix by Sadia</strong>.
+        We offer premium handbags, watches and jewelry with
+        elegant designs, quality craftsmanship and affordable prices.
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>📱 WhatsApp: +92 328 1820980</p>
+
+    <p>📧 Email: styllixbysadia@gmail.com</p>
+
+    <a href="https://wa.me/923281820980" target="_blank">
+        <button class="buy-btn">
+            Chat on WhatsApp
+        </button>
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 STYLLIX BY SADIA | All Rights Reserved.</p>
+
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+
+<a href="https://wa.me/923281820980"
+class="whatsapp"
+target="_blank">
+
+💬
+
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
