@@ -1,0 +1,291 @@
+// =========================
+// HERO SLIDER
+// =========================
+
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index){
+
+slides.forEach(slide=>{
+slide.classList.remove("active");
+});
+
+if(slides[index]){
+slides[index].classList.add("active");
+}
+
+}
+
+function nextSlide(){
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+currentSlide = 0;
+}
+
+showSlide(currentSlide);
+
+}
+
+if(slides.length > 0){
+
+showSlide(0);
+
+setInterval(nextSlide,3000);
+
+}
+
+// =========================
+// LIVE SEARCH
+// =========================
+
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup",()=>{
+
+const value = searchInput.value.toLowerCase();
+
+cards.forEach(card=>{
+
+const title = card.querySelector("h3").innerText.toLowerCase();
+
+if(title.includes(value)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+}
+
+// =========================
+// CART OPEN / CLOSE
+// =========================
+
+const cartIcon = document.getElementById("cartIcon");
+const cartSidebar = document.getElementById("cartSidebar");
+const closeCart = document.getElementById("closeCart");
+
+if(cartIcon){
+
+cartIcon.onclick=()=>{
+
+cartSidebar.classList.add("active");
+
+};
+
+}
+
+if(closeCart){
+
+closeCart.onclick=()=>{
+
+cartSidebar.classList.remove("active");
+
+};
+
+}// =========================
+// CART SYSTEM
+// =========================
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartButtons = document.querySelectorAll(".add-cart");
+const cartCount = document.getElementById("cart-count");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+// =========================
+// ADD TO CART
+// =========================
+
+cartButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const name = button.dataset.name;
+const price = Number(button.dataset.price);
+
+cart.push({
+name:name,
+price:price
+});
+
+saveCart();
+
+alert(name + " added to cart 🛒");
+
+});
+
+});
+
+// =========================
+// SAVE CART
+// =========================
+
+function saveCart(){
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+updateCart();
+
+}
+
+// =========================
+// UPDATE CART
+// =========================
+
+function updateCart(){
+
+if(!cartCount || !cartItems || !cartTotal){
+return;
+}
+
+cartCount.innerText = cart.length;
+
+cartItems.innerHTML = "";
+
+let total = 0;
+
+if(cart.length === 0){
+
+cartItems.innerHTML = "<p>Your cart is empty.</p>";
+
+}
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+cartItems.innerHTML += `
+<div class="cart-product">
+<h4>${item.name}</h4>
+<p>Rs. ${item.price}</p>
+
+<button onclick="removeItem(${index})">
+Remove
+</button>
+
+</div>
+`;
+
+});
+
+cartTotal.innerText = total;
+
+}// =========================
+// REMOVE ITEM
+// =========================
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+saveCart();
+
+}
+
+// =========================
+// WHATSAPP CHECKOUT
+// =========================
+
+const checkoutBtn = document.getElementById("checkoutBtn");
+
+if(checkoutBtn){
+
+checkoutBtn.onclick = ()=>{
+
+if(cart.length===0){
+
+alert("Your cart is empty 🛒");
+
+return;
+
+}
+
+let message="Hello Styllix by Sadia,%0A%0AI want to order:%0A";
+
+cart.forEach(item=>{
+
+message += `${item.name} - Rs.${item.price}%0A`;
+
+});
+
+message += `%0ATotal: Rs.${cartTotal.innerText}`;
+
+window.open(
+"https://wa.me/923281820980?text="+message,
+"_blank"
+);
+
+};
+
+}
+
+// =========================
+// PRODUCT QUANTITY
+// =========================
+
+const plusBtn=document.getElementById("plus");
+const minusBtn=document.getElementById("minus");
+const qty=document.getElementById("qty");
+
+let quantity=1;
+
+if(plusBtn && minusBtn && qty){
+
+plusBtn.onclick=()=>{
+
+quantity++;
+
+qty.innerText=quantity;
+
+};
+
+minusBtn.onclick=()=>{
+
+if(quantity>1){
+
+quantity--;
+
+}
+
+qty.innerText=quantity;
+
+};
+
+}
+
+// =========================
+// PRODUCT IMAGE CHANGE
+// =========================
+
+function changeImage(image){
+
+const mainImage=document.getElementById("mainImage");
+
+if(mainImage){
+
+mainImage.src=image;
+
+}
+
+}
+
+// =========================
+// LOAD CART
+// =========================
+
+updateCart();
